@@ -1,24 +1,28 @@
 <template>
     <div>
-      <h1>Conditional Rending in vue js</h1>  
+  <div v-for="item in items" :key="item.id">
+      {{ item.name }}
+  </div>
     </div>
 </template>
+                                            
 <script>
-export default  {
-      name:'if-condition',
-      props:{
-          data:String,
-          msg:String,
-      },data()
-      {
-          return{show:true}
-      },
-      methods:{
-      display()
-      {
-          this.show=!this.show
-      }
-      }  
-    
-}
+    export default {
+        data() {
+            return {
+                key: value,
+
+                items:[
+                    {
+                        id:1,
+                        name:"bilal",
+                    }
+                ]
+            }
+        },
+    }
 </script>
+
+<style lang="scss" scoped>
+
+</style>
